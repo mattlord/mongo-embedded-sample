@@ -1,5 +1,4 @@
 ## WARNING! This is for demonstration and experimentation purposes only! 
----
 
 This is the source used to build a sample MongoDB Embedded app container image.
 
