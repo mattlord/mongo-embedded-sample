@@ -4,5 +4,5 @@ The container is available on docker hub: https://hub.docker.com/r/mattalord/mon
 
 You can test it this way:
 ```
-docker run --rm mattalord/mongo-embedded-armv7hf:4.0.3 iot_guestbook "Matt Lord" "Hello from Dockerville"
+docker run --rm mattalord/mongo-embedded-armv7hf iot_guestbook "Matt Lord" "Hello from Dockerville"
 ```
