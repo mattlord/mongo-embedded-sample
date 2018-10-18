@@ -2,7 +2,7 @@
 
 This is the source used to build a sample MongoDB Embedded app container image.
 
-The container image is [available on docker hub](https://hub.docker.com/r/mattalord/mongo-embedded-sample/). There is currently only an armhf image which should allow you to run the sample app on any 32 bit ARM OS running on armv7 or armv8 hardware.
+The container image is [available on docker hub](https://hub.docker.com/r/mattalord/mongo-embedded-sample/). There is currently only an armhf image which should allow you to run the sample app on any ARM OS running on armv7 or armv8 hardware.
 
 You can run [the sample app](https://gist.github.com/mattlord/4926ddb4a1d46292e1296f9951f7ca17) -- ``iot_guestbook`` -- this way:
 ```
