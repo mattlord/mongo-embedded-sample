@@ -4,7 +4,7 @@ This is the source used to build a sample MongoDB Embedded app container image (
 
 The container image is [available on docker hub](https://hub.docker.com/r/mattalord/mongo-embedded-sample/). There is currently only an armhf image which should allow you to run the sample app on any Linux ARM distro running on ARMv6 or later hardware.
 
-NOTE: *you can find [instructions for installing Docker on your ARM machine here](https://docs.docker.com/install/linux/docker-ce/debian/#install-docker-ce-1)*.
+  Note: *you can find [instructions for installing Docker on your ARM machine here](https://docs.docker.com/install/linux/docker-ce/debian/#install-docker-ce-1)*.
 
 You can run [the sample app](https://gist.github.com/mattlord/4926ddb4a1d46292e1296f9951f7ca17) -- ``iot_guestbook`` -- this way:
 ```
