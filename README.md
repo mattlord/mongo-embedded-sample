@@ -1,6 +1,6 @@
 ## WARNING! This is for demonstration and experimentation purposes only! 
 
-This is the source used to build a sample MongoDB Embedded app container image.
+This is the source used to build a sample MongoDB Embedded app container image ([see how the mongodb-embedded build was done here](build-instructions.md).
 
 The container image is [available on docker hub](https://hub.docker.com/r/mattalord/mongo-embedded-sample/). There is currently only an armhf image which should allow you to run the sample app on any Linux ARM distro running on ARMv6 or later hardware.
 
