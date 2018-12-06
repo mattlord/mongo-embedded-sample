@@ -25,7 +25,7 @@ $ mkdir $INSTALL_DIR
 
 4. Build the Mongo C Driver
 
-    1. Get the latest Mongo C Driver source (1.13):
+    1. Get the Mongo C Driver source (1.13.0 or later is required):
     ``` $  cd $BUILD_DIR && git clone -b $MONGOC_VERSION --depth 1 https://github.com/mongodb/mongo-c-driver.git ```
 
     1. Install cmake: `$ sudo apt install cmake`
@@ -33,7 +33,7 @@ $ mkdir $INSTALL_DIR
     1. Build and install it: 
     ``` $ cd mongo-c-driver/ && cmake -DENABLE_SHM_COUNTERS=OFF -DENABLE_SNAPPY=OFF -DENABLE_AUTOMATIC_INIT_AND_CLEANUP=OFF -DENABLE_ZLIB=OFF -DENABLE_SSL=OFF -DENABLE_SASL=OFF -DENABLE_TESTS=OFF -DENABLE_SRV=OFF -DENABLE_TESTS=OFF -DENABLE_EXAMPLES=OFF -DENABLE_STATIC=OFF -DCMAKE_C_COMPILER=/usr/bin/arm-linux-gnueabihf-gcc -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_INSTALL_RPATH=\$ORIGIN/../lib -DCMAKE_C_FLAGS="-flto" -DCMAKE_INSTALL_PREFIX="$INSTALL_DIR" . && make install ```
 
-1. Build the MongoDB 4.0 Embedded SDK
+1. Build the MongoDB Embedded SDK
 
     1. Setup the bfd-plugins so that we can use LTO and library collapse (link-model=dynamic-sdk):
     ```
@@ -44,7 +44,7 @@ $ mkdir $INSTALL_DIR
     ```
       Note: *step 4.i should only be necessary on Debian/Ubuntu machines.*
 
-    2. Get the latest MongoDB 4.0 source:
+    2. Get the MongoDB source (4.0.4 or later is required):
     ``` $ cd $BUILD_DIR && git clone -b r$MONGO_VERSION --depth 1 https://github.com/mongodb/mongo.git ``` 
 
     1. Install the python requirements:
