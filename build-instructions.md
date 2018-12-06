@@ -29,7 +29,7 @@ $ mkdir $INSTALL_DIR
     ``` $  cd $BUILD_DIR && git clone -b $MONGOC_VERSION --depth 1 https://github.com/mongodb/mongo-c-driver.git ```
 
     1. Install cmake: `$ sudo apt install cmake`
-git
+
     1. Build and install it: 
     ``` $ cd mongo-c-driver/ && cmake -DENABLE_SHM_COUNTERS=OFF -DENABLE_SNAPPY=OFF -DENABLE_AUTOMATIC_INIT_AND_CLEANUP=OFF -DENABLE_ZLIB=OFF -DENABLE_SSL=OFF -DENABLE_SASL=OFF -DENABLE_TESTS=OFF -DENABLE_SRV=OFF -DENABLE_TESTS=OFF -DENABLE_EXAMPLES=OFF -DENABLE_STATIC=OFF -DCMAKE_C_COMPILER=/usr/bin/arm-linux-gnueabihf-gcc -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_INSTALL_RPATH=\$ORIGIN/../lib -DCMAKE_C_FLAGS="-flto" -DCMAKE_INSTALL_PREFIX="$INSTALL_DIR" . && make install ```
 
