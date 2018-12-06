@@ -37,11 +37,10 @@ $ mkdir $INSTALL_DIR
 
     1. Setup the bfd-plugins so that we can use LTO and link-model=dynamic-sdk:
     ```
-    $ sudo apt install llvm-3.8-dev
     $ sudo mkdir /usr/lib/bfd-plugins && cd /usr/lib/bfd-plugins/
     $ sudo ln -s /usr/lib/gcc/x86_64-linux-gnu/6/liblto_plugin.so
     ```
-      Note: *Creating the symlink should only be necessary on Debian/Ubuntu machines due to [this bug](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=865690).*
+      Note: *This step should only be necessary on Debian/Ubuntu machines due to [this bug](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=865690).*
 
     2. Get the MongoDB source (4.0.4 or later is required):
     ``` $ cd $BUILD_DIR && git clone -b r$MONGO_VERSION --depth 1 https://github.com/mongodb/mongo.git ``` 
