@@ -42,7 +42,7 @@ $ mkdir $INSTALL_DIR
     $ sudo ln -s /usr/lib/llvm-3.8/lib/LLVMgold.so
     $ sudo ln -s /usr/lib/gcc/x86_64-linux-gnu/6/liblto_plugin.so
     ```
-      Note: *step 4.i should only be necessary on Debian/Ubuntu machines.*
+      Note: *step 4.i should only be necessary on Debian/Ubuntu machines due to [this bug](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=865690).*
 
     2. Get the MongoDB source (4.0.4 or later is required):
     ``` $ cd $BUILD_DIR && git clone -b r$MONGO_VERSION --depth 1 https://github.com/mongodb/mongo.git ``` 
