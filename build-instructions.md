@@ -35,7 +35,7 @@ $ mkdir $INSTALL_DIR
 
 1. Build the MongoDB Embedded SDK
 
-    1. Setup the bfd-plugins so that we can use LTO and link-model=dynamic-sdk:
+    1. Setup the bfd-plugins dir so that we can use LTO and link-model=dynamic-sdk:
     ```
     $ sudo mkdir /usr/lib/bfd-plugins && cd /usr/lib/bfd-plugins/
     $ sudo ln -s /usr/lib/gcc/x86_64-linux-gnu/6/liblto_plugin.so
