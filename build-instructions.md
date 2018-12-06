@@ -1,7 +1,7 @@
 # MongoDB Embedded Tarball Build Steps
 
 ## Machine
-I used a Debian 9 x86_64 build host to cross compile for Debian 9 armhf.
+I used a Debian 9.2 x86_64 build host to cross compile for Debian 9 armhf.
 
 ## Steps
 
