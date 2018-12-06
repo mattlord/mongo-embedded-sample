@@ -35,14 +35,13 @@ $ mkdir $INSTALL_DIR
 
 1. Build the MongoDB Embedded SDK
 
-    1. Setup the bfd-plugins so that we can use LTO and library collapse (link-model=dynamic-sdk):
+    1. Setup the bfd-plugins so that we can use LTO and link-model=dynamic-sdk:
     ```
     $ sudo apt install llvm-3.8-dev
     $ sudo mkdir /usr/lib/bfd-plugins && cd /usr/lib/bfd-plugins/
-    $ sudo ln -s /usr/lib/llvm-3.8/lib/LLVMgold.so
     $ sudo ln -s /usr/lib/gcc/x86_64-linux-gnu/6/liblto_plugin.so
     ```
-      Note: *step 4.i should only be necessary on Debian/Ubuntu machines due to [this bug](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=865690).*
+      Note: *Creating the symlink should only be necessary on Debian/Ubuntu machines due to [this bug](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=865690).*
 
     2. Get the MongoDB source (4.0.4 or later is required):
     ``` $ cd $BUILD_DIR && git clone -b r$MONGO_VERSION --depth 1 https://github.com/mongodb/mongo.git ``` 
@@ -58,7 +57,7 @@ $ mkdir $INSTALL_DIR
     ```
     
     1. Build and install the Embedded SDK:
-    ``` $ cd mongo && python ./buildscripts/scons.py CC=/usr/bin/arm-linux-gnueabihf-gcc CXX=/usr/bin/arm-linux-gnueabihf-g++ --link-model=dynamic-sdk --install-mode=hygienic --disable-warnings-as-errors --enable-free-mon=off --js-engine=none --dbg=off --opt=size --wiredtiger=off --use-system-mongo-c=on --allocator=system --prefix=$INSTALL_DIR CCFLAGS="-flto" CPPPATH="$INSTALL_DIR/include/libbson-1.0 $INSTALL_DIR/include/libmongoc-1.0" LIBPATH="$INSTALL_DIR/lib" install-embedded-dev -j16 ```
+    ``` $ cd mongo && python ./buildscripts/scons.py CC=/usr/bin/arm-linux-gnueabihf-gcc CXX=/usr/bin/arm-linux-gnueabihf-g++ --link-model=dynamic-sdk --install-mode=hygienic --disable-warnings-as-errors --enable-free-mon=off --js-engine=none --dbg=off --opt=size --wiredtiger=off --use-system-mongo-c=on --allocator=system --lto --prefix=$INSTALL_DIR CPPPATH="$INSTALL_DIR/include/libbson-1.0 $INSTALL_DIR/include/libmongoc-1.0" LIBPATH="$INSTALL_DIR/lib" install-embedded-dev -j16 ```
 
     1. Save the build:
     ``` $ cd $HOME && tar czvf mongo-embedded-sdk-$MONGO_VERSION-$BUILD_TYPE.tar.gz ./mongo-embedded-sdk-$MONGO_VERSION/ ```
