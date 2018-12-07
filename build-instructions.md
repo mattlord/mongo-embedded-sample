@@ -56,7 +56,7 @@ $ mkdir $INSTALL_DIR
     ```
     
     1. Build and install the Embedded SDK:
-    ``` $ cd mongo && python ./buildscripts/scons.py CC=/usr/bin/arm-linux-gnueabihf-gcc CXX=/usr/bin/arm-linux-gnueabihf-g++ --link-model=dynamic-sdk --install-mode=hygienic --disable-warnings-as-errors --enable-free-mon=off --js-engine=none --dbg=off --opt=size --wiredtiger=off --use-system-mongo-c=on --allocator=system --lto --prefix=$INSTALL_DIR CPPPATH="$INSTALL_DIR/include/libbson-1.0 $INSTALL_DIR/include/libmongoc-1.0" LIBPATH="$INSTALL_DIR/lib" install-embedded-dev -j16 ```
+    ``` $ cd mongo && python ./buildscripts/scons.py CC=/usr/bin/arm-linux-gnueabihf-gcc CXX=/usr/bin/arm-linux-gnueabihf-g++ --link-model=dynamic-sdk --install-mode=hygienic --disable-warnings-as-errors --enable-free-mon=off --js-engine=none --dbg=off --opt=size --wiredtiger=off --use-system-mongo-c=on --allocator=system --lto --prefix=$INSTALL_DIR CPPPATH="$INSTALL_DIR/include/libbson-1.0 $INSTALL_DIR/include/libmongoc-1.0" LIBPATH="$INSTALL_DIR/lib" install-embedded-dev -j$(grep -c ^processor /proc/cpuinfo) ```
 
     1. Save the build:
     ``` $ cd $HOME && tar czvf mongo-embedded-sdk-$MONGO_VERSION-$BUILD_TYPE.tar.gz ./mongo-embedded-sdk-$MONGO_VERSION/ ```
