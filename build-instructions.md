@@ -9,7 +9,7 @@ I used a Debian 9.2 x86_64 build host to cross compile for Debian 9 armhf.
 ```
 $ export BUILD_DIR=$HOME/mongodb-embedded
 $ export MONGOC_VERSION=1.13.0
-$ export MONGO_VERSION=4.0.4
+$ export MONGO_VERSION=4.0.6
 $ export BUILD_TYPE=debian9-armhf
 $ export INSTALL_DIR=$HOME/mongo-embedded-sdk-$MONGO_VERSION
 ``` 
